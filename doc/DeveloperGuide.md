@@ -45,9 +45,11 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | add a new person |
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
+`* * *` | user | edit a person's details | easily update the person's particulars in the event of change such as phone number/address
 `* *` | user | hide [private contact details](#private-contact-detail) by default | to minimize chance of someone else seeing them by accident
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
-
+`*` | user with many persons in the address book | sort them by category | locate a specific group of friends easily 
+`*` | user | add a password in the address book | So as to prevent others from accessing my contacts without my knowledge 
 
 ## Appendix B : Use Cases
 
@@ -74,12 +76,44 @@ Use case ends.
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
 
+#### Use case: Renaming existing tag
+
+**MSS**
+1. Use requests to list persons
+2. AddressBook shows a list of persons
+3. User requests to rename the existing tag of a specific person in the list
+4. AddressBook requests which tag to be renamed
+5. User enters tag to be renamed
+6. AddressBook requests new tag name
+7. User inputs new tag name
+8. AddressBook renames the tag
+User case ends.
+
+**Extensions**
+
+2a. The list is empty
+
+> User case ends
+
+3a. The given index is invalid
+
+> 3a1. AddressBook shows an error message <br>
+  Use case resumes at step 2
+  
+4a. The user has no existing tags
+
+> 4a1. AddressBook shows an error message <br>
+  Use case ends
+
 ## Appendix C : Non Functional Requirements
 
 1. Should work on any [mainstream OS](#mainstream-os) as long as it has Java 8 or higher installed.
 2. Should be able to hold up to 1000 persons.
 3. Should come with automated unit tests and open source code.
 4. Should favor DOS style commands over Unix-style commands.
+5. Should display information requested under 0.5 seconds.
+6. Should be intuitive enough for users who are not IT-savvy
+7. Should be a free application
 
 ## Appendix D : Glossary
 
