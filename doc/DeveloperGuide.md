@@ -45,8 +45,11 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | add a new person |
 `* * *` | user | delete a person | remove entries that I no longer need
 `* * *` | user | find a person by name | locate details of persons without having to go through the entire list
+`* * *` | user | edit a person's details | easily update the person's particulars in the event of change such as phone number/address
 `* *` | user | hide [private contact details](#private-contact-detail) by default | to minimize chance of someone else seeing them by accident
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
+`*` | user with many persons in the address book | sort them by category | locate a specific group of friends easily 
+`*` | user | add a password in the address book | So as to prevent others from accessing my contacts without my knowledge 
 
 
 ## Appendix B : Use Cases
