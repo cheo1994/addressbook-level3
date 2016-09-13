@@ -89,7 +89,10 @@ public class Logic {
         saveIfMutating(command);
         return result;
     }
-
+    
+    /**
+     * Saves the data if data is being changed
+     */
     private void saveIfMutating(Command command) throws StorageOperationException {
         if(command.isMutating())
             storage.save(addressBook);
